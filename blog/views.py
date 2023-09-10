@@ -10,6 +10,11 @@ def index(request):
     return HttpResponse(response)
 
 
+def posts(request):
+    response = render(request, 'blog/list_detail.html')
+    return HttpResponse(response)
+
+
 def number_post_def(request, number_post: int):
     return HttpResponse(f'Здесь содержится информация о посте под номером {number_post}')
 
